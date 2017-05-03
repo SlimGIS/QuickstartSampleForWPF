@@ -1,0 +1,38 @@
+﻿<Window x:Class="QuickstartSampleForWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Wpf="clr-namespace:SlimGis.MapKit.Wpf;assembly=SGMapKit.Wpf"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:QuickstartSampleForWPF"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="525"
+        Height="350"
+        mc:Ignorable="d">
+    <Grid>
+
+        <Wpf:MapControl x:Name="Map1"
+                        Margin="10"
+                        Loaded="Map1_Loaded"
+                        MapClick="Map1_MapClick" />
+
+        <!--  ZoomBar  -->
+        <Wpf:ZoomBar Margin="20"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Top"
+                     Map="{Binding ElementName=Map1}" />
+
+        <!--  ScaleBar  -->
+        <Wpf:ScaleBar Margin="20"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Bottom"
+                      Map="{Binding ElementName=Map1}" />
+
+        <!--  LocationInfoText  -->
+        <Wpf:ViewportBlock Margin="20"
+                              HorizontalAlignment="Right"
+                              VerticalAlignment="Bottom"
+                              Map="{Binding ElementName=Map1}" />
+
+    </Grid>
+</Window>
