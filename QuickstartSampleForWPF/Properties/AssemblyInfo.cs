@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using SlimGis.MapKit.Shared;
+using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -53,3 +54,4 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: RuntimeLicenseKey("YWFhfDI5NTg0NjUuOTk5OTk5OTl8UnVuVGltZXw0M2NlNjA5MzUxYTY0YzdiOGYxNjFiZDB8dC9vTDg1WjJjTVRLK2xHb01FSmgxclZKL3lENldFd01hbEsxUC9Ya3ZQdXNQTXBaYVFQakRtZEduajd5L0xTUTFzVVVTK1RTdXVTQnQvL1drdlRhNzFVU29xZk1FWkZ5VjhLMzNjN2I5VXNubk5JR0NkTytQcHhKTUhXM0p3cHRVTXRENThrb05aa0doQkJ1TVIwN0pLZmg3UVJNbXJFSXB1TC92Q1ZuU2JSL2MwcjRrVFZLZ3cyQ2RWWis1QlBvOGRvVkVjdW9FWjZpd1JNck51R1V6aFZneFRpU1ZLSE5FaDVtazFBY05vUlk4a0sxeDRlSnFXaGU5bEpTYllQQ1RHeStSbnVUVkhybk56L0VidjNRb0xqWmh4dXpRZXhOUHBNcXYzY3RXTWlLTEZzczN0b29vSWRFczRvRWJvVVdZSEtQT05zZ21zTlEvTzhhdmZ6OWNUblVMaFJkWW05cTRqc2ZyaEl4MTI1NGtQb2JwaURtcGpJMVd5Vmt1MDl4dGkwVFhTMnlldTV1L3d5VTY2aTRWSHlZY29VSzZCOCtMWTJrUUk2UHpCZ1p0czZxWGRoY1RhVDBMWEhoZkNabTZJMzNzdUliUVlPYzF2ZmFpU1pzdlE9PQ==")]
