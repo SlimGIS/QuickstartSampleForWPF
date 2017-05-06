@@ -10,29 +10,33 @@
         Height="350"
         mc:Ignorable="d">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Wpf:MapControl x:Name="Map1"
+                     Loaded="Map1_Loaded"
+                     MapClick="Map1_MapClick" />
 
-        <Wpf:MapControl x:Name="Map1"
-                        Margin="10"
-                        Loaded="Map1_Loaded"
-                        MapClick="Map1_MapClick" />
-
-        <!--  ZoomBar  -->
-        <Wpf:ZoomBar Margin="20"
+            <!--  ZoomBar  -->
+            <Wpf:ZoomBar Margin="20"
                      HorizontalAlignment="Right"
                      VerticalAlignment="Top"
                      Map="{Binding ElementName=Map1}" />
 
-        <!--  ScaleBar  -->
-        <Wpf:ScaleBar Margin="20"
-                      HorizontalAlignment="Left"
-                      VerticalAlignment="Bottom"
-                      Map="{Binding ElementName=Map1}" />
+            <!--  ScaleBar  -->
+            <Wpf:ScaleBar Margin="20"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Map="{Binding ElementName=Map1}" />
 
-        <!--  LocationInfoText  -->
-        <Wpf:ViewportBlock Margin="20"
-                              HorizontalAlignment="Right"
-                              VerticalAlignment="Bottom"
-                              Map="{Binding ElementName=Map1}" />
-
+            <!--  LocationInfoText  -->
+            <Wpf:ViewportBlock Margin="20"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Bottom"
+                     Map="{Binding ElementName=Map1}" />
+        </Grid>
+        <local:Footer Grid.Row="1"/>
     </Grid>
 </Window>
