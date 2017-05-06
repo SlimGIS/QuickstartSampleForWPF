@@ -24,7 +24,7 @@ namespace QuickstartSampleForWPF
 
             Map1.UseOpenStreetMapAsBaseMap();
 
-            ShapefileLayer shapefileLayer = new ShapefileLayer("../../AppData/countries-900913.shp");
+            ShapefileLayer shapefileLayer = new ShapefileLayer("AppData/countries-900913.shp");
             shapefileLayer.UseRandomStyle(120);
             Map1.AddStaticLayers("Dynamic Layers", shapefileLayer);
 
