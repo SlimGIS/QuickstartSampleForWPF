@@ -7,11 +7,13 @@ In this guide, I will introduce the following items:
 
 1. Scenario description.
 2. Add assembly references and init the map control.
-4. Add OpenStreetMap as base map.
-5. Build-in Touch and Mouse operation.
+3. Add OpenStreetMap as base map.
+4. Build-in Touch and Mouse operation.
 5. Add a Shapefile and set styles.
-7. Add build-in controls: zoom bar, scale bar etc.
-10. Identify a feature and highlight it.
+5. Add build-in controls: zoom bar, scale bar etc.
+7. Identify a feature and highlight it.
+
+> This project already includes the runtime license. If your trial license is expired, it still can run the project by "ctrl + F5". Or [try executable](https://github.com/SlimGIS/QuickstartSampleForWPF/releases). 
 
 All right, I think we can stop here. Not too much content. It is only parts of this WPF component. View [this page](#) for the full feature list.
 
