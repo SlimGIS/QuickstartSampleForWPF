@@ -35,11 +35,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SGMapKit.Core, Version=3.0.1.0, Culture=neutral, PublicKeyToken=77c845dea9a04899, processorArchitecture=MSIL">
-      <HintPath>..\packages\SGMapKit.Core.3.0.1\lib\net40\SGMapKit.Core.dll</HintPath>
+    <Reference Include="SGMapKit.Core, Version=3.0.6.0, Culture=neutral, PublicKeyToken=77c845dea9a04899, processorArchitecture=MSIL">
+      <HintPath>..\packages\SGMapKit.Core.3.0.6\lib\net40\SGMapKit.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SGMapKit.Wpf, Version=3.0.1.0, Culture=neutral, PublicKeyToken=77c845dea9a04899, processorArchitecture=MSIL">
-      <HintPath>..\packages\SGMapKit.Wpf.3.0.1\lib\net40\SGMapKit.Wpf.dll</HintPath>
+    <Reference Include="SGMapKit.Wpf, Version=3.0.6.0, Culture=neutral, PublicKeyToken=77c845dea9a04899, processorArchitecture=MSIL">
+      <HintPath>..\packages\SGMapKit.Wpf.3.0.6\lib\net45\SGMapKit.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -116,9 +116,7 @@
     <None Include="AppData\countries-900913.shx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
