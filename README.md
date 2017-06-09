@@ -140,3 +140,4 @@ I'm sure you have more ideas for this guide. Please feel free to create a pull r
 - [Installation guide](http://www.slimgis.com/developers/installation)
 - [WPF feature samples](https://www.slimgis.com/developers/feature-samples-wpf)
 - [WPF feature list](https://www.slimgis.com/developers/features-overview-wpf)
+- [WPF API reference](https://www.slimgis.com/developers/api-ref-wpf)
