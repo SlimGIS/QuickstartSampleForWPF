@@ -133,8 +133,6 @@ private void Map1_MapSingleClick(object sender, MapSingleClickEventArgs e)
 Done, press `F5` to run your first fantasy map application. It's pretty simple. 
 ![quickstart-guide-wpf-final](http://i1.piimg.com/567571/13216e41ca9ae34b.png)
 
-[Get the source code](https://github.com/SlimGIS/QuickstartSampleForWPF).
-
 I'm sure you have more ideas for this guide. Please feel free to create a pull request, we are glad to take suggestions from you. Also, let us know how you think by dev@slimgis.com.
 
 ### Related Resource
