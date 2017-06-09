@@ -1,8 +1,6 @@
 # Quickstart Guide for SlimGIS MapKit WPF
 SlimGIS MapKit for WPF is a .net WPF component to help you to easily build up a Map based WPF application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
 
-[Get the source code](https://github.com/SlimGIS/QuickstartSampleForWPF).
-
 When you are reading this guide, I assume that you have installed SlimGIS Setup on your machine (if not ready, please visit [this page](http://www.slimgis.com/developers/installation) and make it ready for few steps).
 
 In this guide, I will introduce the following items:
@@ -138,3 +136,6 @@ Done, press `F5` to run your first fantasy map application. It's pretty simple.
 [Get the source code](https://github.com/SlimGIS/QuickstartSampleForWPF).
 
 I'm sure you have more ideas for this guide. Please feel free to create a pull request, we are glad to take suggestions from you. Also, let us know how you think by dev@slimgis.com.
+
+### Related Resource
+- [Source code](https://github.com/SlimGIS/QuickstartSampleForWPF).
