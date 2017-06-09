@@ -138,4 +138,6 @@ Done, press `F5` to run your first fantasy map application. It's pretty simple.
 I'm sure you have more ideas for this guide. Please feel free to create a pull request, we are glad to take suggestions from you. Also, let us know how you think by dev@slimgis.com.
 
 ### Related Resource
-- [Source code](https://github.com/SlimGIS/QuickstartSampleForWPF).
+- [Source code](https://github.com/SlimGIS/QuickstartSampleForWPF)
+- [Installation guide](http://www.slimgis.com/developers/installation)
+- [WPF feature list](https://www.slimgis.com/developers/features-overview-wpf)
