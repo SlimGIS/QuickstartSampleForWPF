@@ -1,4 +1,6 @@
-# Quickstart Guide for WPF Map Kit
+Keywords: wpf map control, .net ui controls, openstreetmap, touch map
+
+# Quickstart Guide for WPF Map Control
 SlimGIS MapKit for WPF is a .net WPF component to help you to easily build up a Map based WPF application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
 
 When you are reading this guide, I assume that you have installed SlimGIS Setup on your machine (if not ready, please visit [this page](http://www.slimgis.com/developers/installation) and make it ready for few steps).
@@ -58,7 +60,7 @@ Now you could feel free to do the operations below.
 3. Zoom current map viewport to the next level by double click.  
 4. Press `Shift` key on keyboard and hold -> use mouse to draw a rectangle to zoom the drawn area.
 
-If you have a tablet device with OS Win8 above, that is a fantasy part, we support mouse and `touch` at the same time.
+If you have a tablet device with OS Win8 above, that is a fantasy part, we support mouse and `multitouch` at the same time. Try to touch map with following gestures.
 
 1. Pan the map around by one finger touches on the screen and move it.
 2. Pinch the map to zoom in/out with two fingers.
