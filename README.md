@@ -21,7 +21,7 @@ All right, I think we can stop here. Not too much content. It is only parts of t
 
 ## Scenario description.
 What a basic map contains? I'm sure everyone has a different vision of it. Let's open the web browser and visit [maps.google.com](https://www.google.com/maps). It is the most popular map currently.  
-![quickstart-guide-google](http://p1.bqimg.com/567571/baf5b2a702cd22b2.png)
+![quickstart-guide-google](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-google.PNG)
 A basic map application usually contains a map of course; a serial buttons to controll the map viewport (In the screenshot above, it adorns on the bottom right corner, see the little "+" and "-" button). A scale bar belows the buttons on the right of the very bottom. We can add more controls to make it convenient to use. Like displaying current mouse coordinate. This is what all for a common maps have. That's not all for this guide. You know everyone loves Google Maps, but compare with a component, we can do more as we like. In the following part, we will load our own Shapefile, set a nice style and put a lable on it; then interact with it. Isn't it cool? Let's get start.
 
 ## Add assembly references and init the map control.
@@ -33,10 +33,10 @@ At this step, there are several options to continue:
 3. Reference package from NuGet.org.
 
 We will go with option one, as it is already installed on your machine at *C:\Program Files (x86)\SlimGIS\SDK\3.0.0\Wpf*. Let's drag *SGMapKit.Wpf.dll* into the toolbox; Visual Studio will automatically detect the custom controls inside this assembly and prepare the controls for you. See the screenshot below.  
-![quickstart-guide-wpf-toolbox](http://p1.bpimg.com/567571/89bfc2a2bcfda73d.png)  
+![quickstart-guide-wpf-toolbox](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-toolbox.PNG)  
 MapControl is what we are going to add to the *MainWindow.xaml* design-time. Drag this control into the default *MainWindow.xaml* that is created by WPF application template and set a proper size. I'd like to make it like following size.
-![quickstart-guide-wpf-set-a-proper-size](http://p1.bpimg.com/567571/8dc84d9cce26dcc8.png)  
-Now we will add a *Loaded* event on the *MapControl*. Here will do a little trick on Visual Studio. Select map control to make it focus -> Press `F4` button to open the *Properties Explorer*. First we set the control's name to `Map1` and click the *Event handlers for the selected element* button. ![quickstart-guide-wpf-set-map-name](http://p1.bpimg.com/567571/3ee8c36d76dbb734.png)  Scroll down and look for the *Loaded* event, then double click on the textbox. Visual Studio will create the event handler method `Map1_Loaded` for you and auto switch to the source code. It is very convenient. This method is the major place where we will code at.
+![quickstart-guide-wpf-set-a-proper-size](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-set-a-proper-size.PNG)  
+Now we will add a *Loaded* event on the *MapControl*. Here will do a little trick on Visual Studio. Select map control to make it focus -> Press `F4` button to open the *Properties Explorer*. First we set the control's name to `Map1` and click the *Event handlers for the selected element* button. ![quickstart-guide-wpf-set-map-name](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-set-map-name.PNG)  Scroll down and look for the *Loaded* event, then double click on the textbox. Visual Studio will create the event handler method `Map1_Loaded` for you and auto switch to the source code. It is very convenient. This method is the major place where we will code at.
 
 ## Add OpenStreetMap as base map.
 First, we set the very first and important setting on map, the `MapUnit`. `MapUnit` defines the primary coordinate unit which is used to caclulate the vectors or raster position or measuring etc. on the map. In SlimGIS products, we supports linear and degree (longitude & latitude) coordiante system.
@@ -50,7 +50,7 @@ Map1.UseOpenStreetMapAsBaseMap();
 Map1.ZoomToFullBound();
 ```
 That's all to add an OpenStreetMap as base map now. Vert straight forward right? Let's press `F5` to see the effect.
-![quickstart-guide-wpf-osm](http://i1.piimg.com/567571/343ef1d7c3eab3b0.png)
+![quickstart-guide-wpf-osm](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-osm.PNG)
 
 ## Build-in Touch and Mouse operation.
 Now you could feel free to do the operations below. 
@@ -77,7 +77,7 @@ Map1.AddLayers("Dynamic Layers", shapefileLayer);
 *Note: `shapefileLayer.UseRandomStyle(120)` means we give it a random style with 120 alpha component for the fill color. So the screenshots below might have different fill color.*  
 
 Now, our map becomes this:
-![quickstart-guide-wpf-osm-shp](http://i1.piimg.com/567571/d1bcd2c7bd2d7f2f.png)
+![quickstart-guide-wpf-osm-shp](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-osm-shp.PNG)
 
 ## Add build-in controls: zoom bar, scale bar etc.
 We have a build-in pan-zoom bar which allows we to zoom the map with. We could add it by XAML or programmically in the code behind. I guess most XAML developers like to write code in the XAML part. We will go this way. We are going to add a zoom bar to the upper right corner, a scale bar on the lower left corner and text to display current viewport's information on the lower right corner. See the code below:  
@@ -103,14 +103,14 @@ We have a build-in pan-zoom bar which allows we to zoom the map with. We could a
 *Note: one important setting is the `Map` property. we have to bind the defined map to the control.*  
 
 Now, our map becomes this:
-![quickstart-guide-wpf-controls](http://p1.bqimg.com/567571/0c7145c9a188e320.png)
+![quickstart-guide-wpf-controls](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-controls.PNG)
 
 ## Identify a feature and highlight it.
 At current step, our map is static map. Although we have build-in function like guesture, mouse interaction etc. But that is not enough for a map control.  
 In this section, we are going to do some custom interaction with map. Like the normal map that allows to identify a feature and show some information of the feature on the map.
 
 1. add a click event on the map. We will add it in XAML like we used to do.  
-![quickstart-guide-wpf-click-event](http://i1.piimg.com/567571/66896b73bbb7b557.png)
+![quickstart-guide-wpf-click-event](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-click-event.PNG)
 2. Implement the event as following.
 ```csharp
 private void Map1_MapSingleClick(object sender, MapSingleClickEventArgs e)
@@ -133,7 +133,7 @@ private void Map1_MapSingleClick(object sender, MapSingleClickEventArgs e)
 }
 ```
 Done, press `F5` to run your first fantasy map application. It's pretty simple. 
-![quickstart-guide-wpf-final](http://i1.piimg.com/567571/13216e41ca9ae34b.png)
+![quickstart-guide-wpf-final](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-final.PNG)
 
 I'm sure you have more ideas for this guide. Please feel free to create a pull request, we are glad to take suggestions from you. Also, let us know how you think by dev@slimgis.com.
 
