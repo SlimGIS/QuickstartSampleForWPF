@@ -31,7 +31,7 @@
                      VerticalAlignment="Bottom"
                      Map="{Binding ElementName=Map1}" />
 
-            <!--  LocationInfoText  -->
+            <!--  ViewportBlock  -->
             <Wpf:ViewportBlock Margin="20"
                      HorizontalAlignment="Right"
                      VerticalAlignment="Bottom"

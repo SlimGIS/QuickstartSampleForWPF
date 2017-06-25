@@ -32,7 +32,7 @@ At this step, there are several options to continue:
 2. Reference assembly from installed folder.
 3. Reference package from NuGet.org.
 
-We will go with option one, as it is already installed on your machine at *C:\Program Files (x86)\SlimGIS\SDK\3.0.0\Wpf*. Let's drag *SGMapKit.Wpf.dll* into the toolbox; Visual Studio will automatically detect the custom controls inside this assembly and prepare the controls for you. See the screenshot below.  
+We will go with option one, as it is already installed on your machine at *C:\Program Files (x86)\SlimGIS\3.0.0\SDK\Wpf*. Let's drag *SGMapKit.Wpf.dll* into the toolbox; Visual Studio will automatically detect the custom controls inside this assembly and prepare the controls for you. See the screenshot below.  
 ![quickstart-guide-wpf-toolbox](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-toolbox.PNG)  
 MapControl is what we are going to add to the *MainWindow.xaml* design-time. Drag this control into the default *MainWindow.xaml* that is created by WPF application template and set a proper size. I'd like to make it like following size.
 ![quickstart-guide-wpf-set-a-proper-size](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-set-a-proper-size.PNG)  
@@ -72,7 +72,7 @@ We prepared a contrys ShapeFile data in Spherical Mercator in the sample. If you
 ```csharp
 ShapefileLayer shapefileLayer = new ShapefileLayer("../../AppData/cntry02-900913.shp");
 shapefileLayer.UseRandomStyle(120);
-Map1.AddLayers("Dynamic Layers", shapefileLayer);
+Map1.AddStaticLayers("Dynamic Layers", shapefileLayer);
 ```
 *Note: `shapefileLayer.UseRandomStyle(120)` means we give it a random style with 120 alpha component for the fill color. So the screenshots below might have different fill color.*  
 
@@ -94,11 +94,11 @@ We have a build-in pan-zoom bar which allows we to zoom the map with. We could a
               VerticalAlignment="Bottom"
               Map="{Binding ElementName=Map1}" />
 
-<!--  LocationInfoText  -->
-<Wpf:LocationInfoText Margin="20"
-                      HorizontalAlignment="Right"
-                      VerticalAlignment="Bottom"
-                      Map="{Binding ElementName=Map1}" />
+<!--  ViewportBlock  -->
+<Wpf:ViewportBlock Margin="20"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Bottom"
+              Map="{Binding ElementName=Map1}" />
 ```
 *Note: one important setting is the `Map` property. we have to bind the defined map to the control.*  
 
@@ -113,14 +113,13 @@ In this section, we are going to do some custom interaction with map. Like the n
 ![quickstart-guide-wpf-click-event](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWPF/master/Screenshots/quickstart-guide-wpf-click-event.PNG)
 2. Implement the event as following.
 ```csharp
-private void Map1_MapSingleClick(object sender, MapSingleClickEventArgs e)
+private void Map1_MapClick(object sender, MapClickEventArgs e)
 {
     // We added a ShapefileLayer in the Loaded event, 
     // it's default name is the name of the shapefile.
     // so here, we could find the layer back by the shapefile name without extension. 
-    FeatureLayer featureLayer = Map1.FindLayer<FeatureLayer>("cntry02-900913");
-    Feature identifiedFeature = IdentifyHelper.Identify(featureLayer, e.WorldCoordinate, Map1.CurrentScale, Map1.MapUnit)
-        .FirstOrDefault();
+    FeatureLayer featureLayer = Map1.FindLayer<FeatureLayer>("countries-900913");
+    Feature identifiedFeature = IdentifyHelper.Identify(featureLayer, e.WorldCoordinate, Map1.CurrentScale, Map1.MapUnit).FirstOrDefault();
 
     Map1.Placements.Clear();
     if (identifiedFeature != null)
