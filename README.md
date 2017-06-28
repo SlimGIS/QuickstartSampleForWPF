@@ -1,7 +1,7 @@
 Keywords: wpf map control, .net ui controls, openstreetmap, touch map
 
 # Quickstart Guide for WPF Map Control
-SlimGIS MapKit for WPF is a .net WPF component to help you to easily build up a Map based WPF application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
+SlimGIS Map Kit for WPF is a .net WPF component to help you to easily build up a Map based WPF application. It contains full function of SlimGIS Map Kit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
 
 When you are reading this guide, I assume that you have installed SlimGIS Setup on your machine (if not ready, please visit [this page](http://www.slimgis.com/developers/installation) and make it ready for few steps).
 
@@ -139,6 +139,6 @@ I'm sure you have more ideas for this guide. Please feel free to create a pull r
 ### Related Resources
 - [Source code](https://github.com/SlimGIS/QuickstartSampleForWPF)
 - [Installation guide](http://www.slimgis.com/developers/installation)
-- [WPF feature samples](https://www.slimgis.com/developers/feature-samples-wpf)
-- [WPF feature list](https://www.slimgis.com/developers/features-overview-wpf)
-- [WPF API reference](https://www.slimgis.com/developers/api-ref-wpf)
+- [Feature samples](https://www.slimgis.com/developers/feature-samples-wpf)
+- [Features overview](https://www.slimgis.com/developers/features-overview-wpf)
+- [API reference](https://www.slimgis.com/developers/api-ref-wpf)
